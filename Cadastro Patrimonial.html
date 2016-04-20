@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ 
+<html>
+ <head>
+ <title> Software para Controle de Patrimonio </title>
+ 
+ </head>
+
+ <body>
+  <h1> CADASTRO BEM PRIMONIAL </h1> <br />
+
+<form action="Script_do_Formulario.php" method="post">
+
+<!-- Cadastro-->
+<fieldset>
+ <legend>Cadastro Patrimonial</legend>
+ <table cellspacing="10">
+ <td>
+    <label for="Numero">Numero: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="Numero" size="13" maxlength="13"> 
+   </td>
+
+    <td>
+    <label for="Descricao">Descricao: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="descricao" size="20" maxlength="20"> 
+    </td>
+
+    <tr>
+    <td>
+    <label for="NotaFiscal">Nota Fiscal: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="NotaFiscal" size="13" maxlength="13"> 
+   </td>
+   </tr>
+
+   <td>
+    <label for="Fornecedor">Fornecedor: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="Fornecedor" size="13" maxlength="20"> 
+   </td>
+
+   <tr>
+   <td>
+    <label>Data da Nota: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="dia" size="2" maxlength="2" value="dd"> 
+   <input type="text" name="mes" size="2" maxlength="2" value="mm"> 
+   <input type="text" name="ano" size="4" maxlength="4" value="aaaa">
+   </td>
+   </tr>
+
+ <td>
+    <label for="Localizaçao">Localizacao do bem: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="Localizacao" size="13" maxlength="10"> 
+   </td>
+
+ <td>
+    <label for="Categoria">Categiria do Bem: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="Categoria" size="13" maxlength="10"> 
+   </td>
+
+    <td>
+    <label for="NotaFiscal">Valor do Bem: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="NotaFiscal" size="13" maxlength="10"> 
+   </td>
+
+   <td>
+    <label for="estado">Situacao do Bem:</label>
+   </td>
+   <td align="left">
+    <select name="Situacao"> 
+    <option value="USO">Em Uso</option> 
+    <option value="Manutencao">Manutencao</option> 
+    <option value="Inutil">Inutilizado</option> 
+   </select>
+   </td>
+   
+  
+ </table>
+</fieldset>
+
+</form>
+
+</body>
+</html>
