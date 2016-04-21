@@ -1,124 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Cadastro de bem patrim&ocirc;nial</title>
 
-<html>
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+</head>
+<body> 
+
 	
-		<head>
-			<title>Cadastro de bem patrim&ocirc;nial</title>
-			<style type="text/css">
-				body{
-					font:normal 14px/22px Arial;
-					background: #D8D8D8;
-
-				}
-
-				.corpo{
-					background: #fff;
-					
-					
-
-				}
-				.grid_100{
-					width:98%; 
-					min-height:150px;
-					margin-left: 4px;
-				}
-				.coluna{
-					width:190px;
-					min-height: 50px;
-					float: left;
-					background: white;
-
-					
-					margin:4px 0 0 4px;
-
-				}
-				.coluna p{
-					font:normal 14px/12px Arial;
-				}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container-fluid">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+   <a class="navbar-brand" href="#">Cygni Patrim&ocirc;nio</a>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Opções</a></li>
+    <li><a href="#">Perfil</a></li>
+    <li><a href="#">Ajuda</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
 
 
+<div id="main" class="container-fluid">
+ <h3 class="page-header">Adicionar bem patrim&ocirc;nial</h3>
+</div>
 
+<form action="bem_patrimonial.php" method="post" name="bem_patrimonial">
+  <!-- area de campos do form -->
+    <div class="row">
+ <div class="form-group col-md-4">
+   <label for="campo1">N&uacute;mero do bem</label>
+   <input type="number" class="form-control" id="campo1" name="numero">
+ </div>
+ 
+ <div class="form-group col-md-4">
+   <label for="campo2">Descri&ccedil;&atilde;o</label>
+   <!--<input type="text" class="form-control" id="campo3">-->
+   <textarea name="descricao" class="form-control" id="campo2" rows="10" cols="30">Escreva aqui!
+    </textarea>
 
-			</style>
-		</head>
-
-		<body>
-			<div class="corpo">
-				<!-- inicio -->	
-
-
-<h2>Cadastro de bem patrim&ocirc;nial</h2>
-
-			<form action="bem_patrimonial.php" method="get"name="bem_patrimonial">
-
-			N&uacute;mero: <input type="number" name="numero"><br><br>
-
-			Descri&ccedil;&atilde;o:<br><br> <textarea name="descricao" rows="10" cols="30">Escreva aqui!
-		</textarea><br><br>
-
-			<div class="grid_100">
-			
-				<div class="coluna"> 
-					<p> Nota fiscal</p>
-					<input type="number" name="nota_fiscal" value="000000" size="10">
-				</div>
-				<div class="coluna"> 
-					<p> Data da Nota</p>
-					<input type="date" name="data_nota">
-				</div>
-
-				<div class="coluna"> 
-					<p> Fornecedor</p>
-					<input type="text" name="fornecedor">
-				</div>
-
-				<div class="coluna"> 
-					<p> Sala de localiza&ccedil;&atilde;o</p>
-					<input type="text" name="localizacao_bem">
-				</div>
-
-				<div class="coluna"> 
-					<p>Categoria</p>
-					<select name="categoria">
-					  <option>01</option>
-					  <option>02</option>
-					  <option>03</option>
-					  <option>04</option>
-					  <option>05</option>
-					  </select><br>      
-				</div>
-
-				<div class="coluna"> 
-					<p>Valor do bem</p>
-					<input type="number" name="valor">
-					      
-				</div>
-
-			</div>
-
-			<fieldset><legend>Situa&ccedil;&atilde;o do bem </legend>
-
-			Em uso<input type="radio" name="situacao"><br>
-			Manuten&ccedil;&atilde;o<input type="radio" name="situacao"><br>
-			Inutilizado<input type="radio" name="situacao"><br>	    
-           </fiedlset>
-		   
-
-			
-
-			
-
-			
+ </div>
+ 
+ <div class="form-group col-md-4">
+   <label for="campo3">Nota Fiscal</label>
+   <input type="number" class="form-control" id="campo3" name="nota_fiscal" value="00000">
+ </div>
 
 
 
+<div class="form-group col-md-4">
+   <label for="campo4">Data da Nota</label>
+   <input type="date" class="form-control" id="campo4" name="data_nota">
+ </div>
 
-			</form>	
+<div class="form-group col-md-4">
+   <label for="campo5">Fornecedor</label>
+   <input type="text" class="form-control" id="campo5" name="fornecedor">
+ </div>
 
 
+<div class="form-group col-md-4">
+   <label for="campo6">Sala de localiza&ccedil;&atilde;o do bem</label>
+   <input type="number" class="form-control" id="campo6" name="localizacao_bem">
+ </div>
+
+ <div class="form-group col-md-4">
+   <label for="campo7">Categoria</label>
+   <select name="categoria" class="form-control" id="campo7">
+    <option>01</option>
+    <option>02</option>
+    <option>03</option>
+    <option>04</option>
+    <option>05</option>
+    </select><br>     
+ </div>
+
+  <div class="form-group col-md-4">
+   <label for="campo8">Valor do bem</label>
+   <input type="number" class="form-control" id="campo8" name="valor">
+ </div>  
 
 
-				<!-- fim -->
-			</div>
-		</body>
+<div class="form-group col-md-4">
+   <label for="campo9">Situa&ccedil;&atilde;o do bem </label><br>
+   <input type="radio" value="uso" id="campo9" name="situacao">Em uso<br>
+   <input type="radio" value="manutencao" id="campo9" name="situacao">Em manuten&ccedil;&atilde;o<br>
+   <input type="radio" value="inutilizado" id="campo9" name="situacao">Inutilizado<br>
+   
+ </div> 
+</div>
+  <hr />
+  <div id="actions" class="row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a href="index.html" class="btn btn-default">Cancelar</a>
+    </div>
+  </div>
+</form>
 
-</html>		
+
+ <script src="js/jquery.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
