@@ -1,17 +1,23 @@
 <html>
 <header>
     <meta charset="UTF-8" />
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+     
     <h1>Cadastro de Prédios </h1>
 </header>
 <body>
     
     <div>
-        <form name="frm" id="frm" action="#" method="POST" onsubmit="  ">
-            <br>  Nome <input type="text" name="predio" value="" /><br>
-            <br>  Endereço do prédio <input type="text" name="predio" value="" />  <br>
+        <form name="frm" id="frm" action="cadpredio.php" method="POST" onsubmit="  ">
+            <br><input type="number" name="codigo" value="" required= "y" />  Código <br>
+            <br><input type="text" name="nome" value="" size= "30"  required= "y"/>  Nome <br>
+            <br><input type="text" name="endereco" value="" size= "30" required= "y" /> Endereço do prédio <br>
             <br><input type="submit" name="inserir" id="btninserir" value="Inserir" />
 
         </form>
     </div>
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
