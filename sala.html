@@ -1,45 +1,110 @@
 <html>
 
 
-<style>
-
-
-</style>	
-
-
-
-	
-	
-	
-	
 	<body>
 	
 	
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	    <html xmlns="http://www.w3.org/1999/xhtml">
-	    <head>
-	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		
+	
+	<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Cygni Patrimônio</title>
+
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+</head>
+<body> 
+
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ 
+ 
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container-fluid">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+   <a class="navbar-brand" href="#">Cygni Patrimônio</a>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Opções</a></li>
+    <li><a href="#">Usuário</a></li>
+    <li><a href="#">Ajuda</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
 	
 	
 		
-			<h1> Cygni Patrimônio</h1>
+			<h1> Salas</h1>
 		</br>
 
-		<form name="frmsala" id="frmsala" action=".php" method="GET" >
-				
-			Sala <input type="number" name="_sala" id="_sala" size="30" required="Y" /> <br/>
-			</br>	
-			Comprimento <input type="number" name="comprimento" id="comprimento" size="30" required="Y" /> <br/>
-		    </br>
-			Largura <input type="number" name="largura" id="largura" size="30" required="Y" /> <br/>
-			</br>
-			Codigo do Predio <input type="number" name="codPredio" id="codPredio" size="30" required="Y" /> <br/>
-			</br>
-			Sigla Departamento <input type="text" name="siglaDpto" id="siglaDpto" size="30" required="Y" /> <br/>
-			</br>
-			</br>
-			<a href="index.html">Retornar a Tela pricipal</a>
+<form name="frmsala" id="frmsala" action=".php" method="GET" 
+  <!-- area de campos do form -->
+  
+
+ 
+ 
+ <div class="form-group col-md-4">
+   <label for="sala">Sala</label>
+   <input type="number" class="form-control" id="sala">
+ </div>
+ 
+ <div class="form-group col-md-4">
+   <label for="comprimento">Comprimento</label>
+   <input type="number" class="form-control" id="comprimento">
+ </div>
+ 
+ <div class="form-group col-md-4">
+   <label for="largura">Largura</label>
+   <input type="number" class="form-control" id="largura">
+ </div>
+</div>
+ 
+ <div class="form-group col-md-4">
+   <label for="codPredio">Código do Prédio</label>
+   <input type="number" class="form-control" id="codPredio">
+ </div>
+</div>
+ 
+ <div class="form-group col-md-4">
+   <label for="siglaDpto">Sigla Departamento</label>
+   <input type="text" class="form-control" id="siglaDpto">
+ </div>
+</div>
+ 
+
+<hr />
+
+ <div class="col-md-12">
+  </br>
+  
+   <a href="edit.html" class="btn btn-default">Cadastrar</a>
+   <a href="edit.html" class="btn btn-default">Listar Salas</a>
+   </br>
+   </br>
+   
+   <a href="#" class="btn btn-default" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+   </br>
+   </br>
+    <a href="index.html" class="btn btn-primary">  Voltar  </a>
+	</br>
+ </div>
+</div>
+
+
+ 
+
 			
 		</form>
 		
