@@ -9,7 +9,7 @@
  <body>
   <h1> CADASTRO DE DEPARTAMENTO </h1> <br />
 
-<form action="Script_do_Formulario.php" method="post">
+<form name="incluir" action="Cadastro Departamento.php" method="post">
 
 <!-- Cadastro-->
 <fieldset>
@@ -19,7 +19,7 @@
     <label for="SiglaDepa">Sigla do Departamento: </label>
    </td>
    <td align="left">
-    <input type="text" name="Numero" size="1" maxlength="13"> 
+    <input type="text" name="SiglaDepa" size="1" maxlength="13"> 
    </td>
 
 
@@ -28,7 +28,7 @@
     <label for="NomeDepa">Nome do Departamento: </label>
    </td>
    <td align="left">
-    <input type="text" name="descricao" size="30" maxlength="20"> 
+    <input type="text" name="NomeDepa" size="30" maxlength="20"> 
     </td>
     </tr>
 
@@ -37,7 +37,7 @@
     <label for="ResponsavelDepa">Responsavel pelo Departamento: </label>
    </td>
    <td align="left">
-    <input type="text" name="NotaFiscal" size="30" maxlength="13"> 
+    <input type="text" name="ResponsavelDepa" size="30" maxlength="13"> 
    </td>
    </tr>
 
@@ -45,11 +45,17 @@
     <label for="SalaDepa">Sala do Departamento Ocupado: </label>
    </td>
    <td align="left">
-    <input type="text" name="Fornecedor" size="30" maxlength="20"> 
+    <input type="text" name="SalaDepa" size="30" maxlength="20"> 
    </td>
 
  </table>
 </fieldset>
+
+<tr>
+<input class="btn_submit" type="submit" value="GRAVAR"><br></br>
+</tr>
+
+<a href="home.html"> <b>< VOLTAR</b>
 
 </form>
 
