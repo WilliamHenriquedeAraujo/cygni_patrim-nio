@@ -20,6 +20,6 @@ $conexao = pg_connect($servidor) or die ("Não foi possivel conectar ao servidor
 
 
 
-$result = pg_query($conexao, "INSERT INTO Cadastro Departamento VALUES ('".$SiglaDepa."', '".$NomeDepa."',
+$result = pg_query($conexao, "INSERT INTO Departamento VALUES ('".$SiglaDepa."', '".$NomeDepa."',
 	'".$ResponsavelDepa."')");
 ?>
