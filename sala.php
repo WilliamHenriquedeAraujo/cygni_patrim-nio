@@ -5,7 +5,7 @@
 		if (!$conexao){
 			echo "Não foi possível estabelecer uma conexão com o Banco.";
 		}else{
-			$sala = $_POST ['_sala'];
+			$_sala = $_POST ['_sala'];
 			$comprimento = $_POST ['comprimento'];
 			$largura = $_POST ['largura'];
 			$codPredio = $_POST ['codPredio'];
