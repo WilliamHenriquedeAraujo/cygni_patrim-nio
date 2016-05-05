@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Cygni MBP</title>
+
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+</head>
+<body> 
+
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ 
+ 
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container-fluid">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+   <a class="navbar-brand" href="#">Cygni Patrimônio</a>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Opções</a></li>
+    <li><a href="#">Usuário</a></li>
+ 
+   </ul>
+  </div>
+ </div>
+</nav>
+
+ <div id="main" class="container-fluid">
+ <h3 class="page-header">Dados necessários</h3>
+</div>
+ 
+ 
+
+ 
+<form name="frmBem" id="frmBem" action="movimentacao_bem.php" method="POST" >
+
+  
+
+ 
+
+ 
+ <div class="form-group col-md-4">
+   <label for="numero_bem">Número do bem patrimônial</label>
+   <input type="number" class="form-control" name="numero_bem">
+ </div>
+ 
+ <div class="form-group col-md-4">
+   <label for="sala_antiga">Sala onde o bem se encontra</label>
+   <input type="number" class="form-control" name="sala_antiga">
+ </div>
+</div>
+ 
+ <div class="form-group col-md-4">
+   <label for="sala_nova">Sala que irá transferir o bem</label>
+   <input type="number" class="form-control" name="sala_nova">
+ </div>
+</div>
+ 
+ 
+  
+  
+  
+  <hr />
+  <div id="actions" class="row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary"> Salvar Alterações</button>
+    
+    </div>
+  </div>
+</form>
+ 
+
+
+ 
+ 
+</body>
+</html>
