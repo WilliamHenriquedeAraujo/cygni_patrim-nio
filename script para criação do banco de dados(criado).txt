@@ -1,0 +1,130 @@
+﻿CREATE TABLE Predio (
+                codigo_predio INTEGER NOT NULL,
+                nome VARCHAR(50) NOT NULL,
+                endereco VARCHAR(100) NOT NULL,
+                CONSTRAINT codigo_predio_pk PRIMARY KEY (codigo_predio)
+);
+
+
+CREATE TABLE usuario (
+                login VARCHAR(20) NOT NULL,
+                nome VARCHAR(50) NOT NULL,
+                senha VARCHAR(60) NOT NULL,
+                nivel CHAR(1) NOT NULL,
+                CONSTRAINT login_usuario_pk PRIMARY KEY (login)
+);
+
+
+CREATE TABLE Categoria (
+                codigo INTEGER NOT NULL,
+                nome VARCHAR(30) NOT NULL,
+                descricao VARCHAR(80) NOT NULL,
+                CONSTRAINT codigo_categoria_pk PRIMARY KEY (codigo)
+);
+
+
+CREATE TABLE Departamento (
+                sigla CHAR(5) NOT NULL,
+                nome VARCHAR(30) NOT NULL,
+                responsavel VARCHAR(20) NOT NULL,
+                CONSTRAINT sigla_departamento_pk PRIMARY KEY (sigla)
+);
+
+
+CREATE TABLE Sala (
+                _sala INTEGER NOT NULL,
+                comprimento REAL NOT NULL,
+                largura REAL NOT NULL,
+                codPredio INTEGER NOT NULL,
+                siglaDpto CHAR(5) NOT NULL,
+                CONSTRAINT numero_sala_pk PRIMARY KEY (_sala)
+);
+
+
+CREATE TABLE BemPatrimonial (
+                numero_bem INTEGER NOT NULL,
+                descricao VARCHAR(80) NOT NULL,
+                nrNotaFiscal INTEGER NOT NULL,
+                dtNotaFiscal DATE NOT NULL,
+                fornecedor VARCHAR NOT NULL,
+                valor DOUBLE PRECISION NOT NULL,
+                situacao CHAR(1) NOT NULL,
+                codCat INTEGER NOT NULL,
+                NumSala INTEGER NOT NULL,
+                CONSTRAINT numero_bemPatrimonial_pk PRIMARY KEY (numero_bem)
+);
+
+
+CREATE TABLE MBP (
+                numero_mbp INTEGER NOT NULL,
+                data DATE NOT NULL,
+                login VARCHAR(20) NOT NULL,
+                numBem INTEGER NOT NULL,
+                numSalaOrigem INTEGER NOT NULL,
+                numSalaDestino INTEGER NOT NULL,
+                CONSTRAINT numero_mbp_pk PRIMARY KEY (numero_mbp)
+);
+
+
+ALTER TABLE Sala ADD CONSTRAINT predio_sala_fk
+FOREIGN KEY (codPredio)
+REFERENCES Predio (codigo_predio)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE MBP ADD CONSTRAINT usuario_mbp_fk
+FOREIGN KEY (login)
+REFERENCES usuario (login)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Departamento ADD CONSTRAINT usuario_departamento_fk
+FOREIGN KEY (responsavel)
+REFERENCES usuario (login)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE BemPatrimonial ADD CONSTRAINT categoria_bem_patrimonial_fk
+FOREIGN KEY (codCat)
+REFERENCES Categoria (codigo)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Sala ADD CONSTRAINT departamento_sala_fk
+FOREIGN KEY (siglaDpto)
+REFERENCES Departamento (sigla)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE MBP ADD CONSTRAINT sala_mbp_fk
+FOREIGN KEY (numSalaOrigem)
+REFERENCES Sala (_sala)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE BemPatrimonial ADD CONSTRAINT sala_bem_patrimonial_fk
+FOREIGN KEY (NumSala)
+REFERENCES Sala (_sala)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE MBP ADD CONSTRAINT sala_mbp_fk1
+FOREIGN KEY (numSalaDestino)
+REFERENCES Sala (_sala)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE MBP ADD CONSTRAINT bem_patrimonial_mbp_fk
+FOREIGN KEY (numBem)
+REFERENCES BemPatrimonial (numero_bem)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
