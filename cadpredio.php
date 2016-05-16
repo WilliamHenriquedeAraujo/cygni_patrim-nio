@@ -1,4 +1,4 @@
-﻿<?php
+<?php
          $strBd = "host=localhost port=5432 dbname=cygni user=postgres password=root";
 		 $conexao = pg_connect($strBd);
 		 
@@ -12,6 +12,7 @@
 			$query = "INSERT INTO predio VALUES ('$_POST[codigo]','$_POST[nome]','$_POST[endereco]')";  
 
 			pg_query($query);
+			
 			
 			echo "Prédio cadastrado com sucesso!!";
 			

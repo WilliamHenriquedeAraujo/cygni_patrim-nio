@@ -55,19 +55,19 @@
  </br>
   		</br>
   		</br>
-		<h1>Cadastrar Salas</h1>
+		<h1>Relatório Salas</h1>
 		</br>
 
 		
 		<?php
 
- 			$strBd = "host=localhost port=5432 dbname=patrimonio user=postgres password=root";
+ 			$strBd = "host=localhost port=5432 dbname=cygni user=postgres password=root";
 			 $conexao = pg_connect($strBd);
 			if (!$conexao){
 				echo "Não foi possível estabelecer uma conexão com o Banco.";
 			}else{
 				
-				echo "<table class=table table-bordered>";
+				echo "<table class=table table-responsive>";
 				echo "<tr><th>Numero</th><th>Nome</th><th>Endereço</th></tr>";
 				$result = pg_query ($conexao , "select * from predio");
 				while ($row=pg_fetch_row($result)) {
@@ -91,5 +91,5 @@
 	   </br>	
 
 	</body>
-  <a href="index.html" class="btn btn-primary">  Voltar  </a>
+ 
 </html> 
