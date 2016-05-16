@@ -12,7 +12,7 @@
 			$query = "INSERT INTO departamento VALUES ('$_POST[sigla]','$_POST[nome]','$_POST[responsavel]')";  
 			pg_query($query);
 			
-			echo "Prédio cadastrado com sucesso!!";
+			echo "Departamento cadastrado com sucesso!!";
 			
 		}
 		
