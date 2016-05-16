@@ -1,5 +1,25 @@
 <html>
 <header>
+
+ <script language="javascript">
+
+function validarSenha(form){ 
+    senha = document.frmcad.senha.value
+	conf_senha = document.frmcad.conf_senha.value
+ 
+	if (senha == conf_senha){
+		alert("SENHAS IGUAIS")
+	}else{
+		alert("SENHAS DIFERENTES")
+}
+
+
+</script>
+
+
+
+
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +59,11 @@
     <div class="container">
   <div class="jumbotron">
     <div class="row">
-        <form name="frmcad" id="frmcad" action="CdUsuario.php" method="POST" >
+	
+	
+	
+	
+        <form name="frmcad" id="frmcad" action="CdUsuario.php" method="POST" "onSubmit=javascript: return validarSenha(form) (); " >
             
             
 
@@ -58,7 +82,7 @@
 
             <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" placeholder="Senha">
+            <input type="password" class="form-control" id="senha" id="  placeholder="Senha">
             </div>
 
             <div class="form-group">
