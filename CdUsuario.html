@@ -71,23 +71,23 @@ function validarSenha(form){
 
             <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Nome">
+            <input type="text" class="form-control" id="nome" placeholder="Nome" required>
             </div>
 			
 			<div class="form-group">
             <label for="login">Login</label>
-            <input type="text" class="form-control" id="login" placeholder="Login">
+            <input type="text" class="form-control" id="login" placeholder="Login" required>
             </div>
 			
 
             <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" id="  placeholder="Senha">
+            <input type="password" class="form-control" id="senha" id="  placeholder="Senha" required>
             </div>
 
             <div class="form-group">
             <label for="conf_senha">Confirme a Senha</label>
-            <input type="password" class="form-control" id="conf_senha" placeholder="Senha">
+            <input type="password" class="form-control" id="conf_senha" placeholder="Senha" required>
             </div>
             <div class="form-group">
               <label for="nivel">Selecione Nivel:</label>
@@ -107,7 +107,8 @@ function validarSenha(form){
                 
                 </div>
                 </div>
-            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Cadastrar" />  <a href="index.html" class="btn btn-default">Cancelar</a>
+            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Cadastrar" onclick="validarSenha" />  
+			  <a href="index.html" class="btn btn-default">Cancelar</a>
 
         </form>
     </div>
