@@ -1,5 +1,20 @@
-
 <html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Cygni Patrimônio</title>
+
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+</head>
 
 
 <?php
@@ -20,28 +35,17 @@ else{
 	$sql_insercao="INSERT INTO usuario (login,nome,senha,nivel) VALUES ('".$login."', '".$nome."', '".$senha."', '".$nivel."');";
 	
 	pg_query($status_conexao, $sql_insercao);
-	
+	echo "</br>";
+    echo "</br>";
+    echo "</br>";
 	echo "<strong>A gravacao dos dados foi realizada com sucesso!<strong><br>";
 	
 }
 ?>
 
 
-	<body>
-	
-	
-	
-	<!DOCTYPE html>
-<html lang="pt-br">
-<head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Cygni Patrimônio</title>
 
- <link href="css/bootstrap.min.css" rel="stylesheet">
- <link href="css/style.css" rel="stylesheet">
-</head>
+
 <body> 
 
  <script src="js/jquery.min.js"></script>
@@ -72,11 +76,13 @@ else{
   </div>
  </div>
 </nav>
+
 </br>
+</body>
 </br>
+
 <a href="index.html" class="btn btn-default">Voltar</a>
 
 </html> 
-
 
 
