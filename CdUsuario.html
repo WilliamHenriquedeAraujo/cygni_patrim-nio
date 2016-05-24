@@ -1,18 +1,16 @@
 <html>
-<header>
+	<header>
+		<script language="javascript">
 
- <script language="javascript">
 
-function validarSenha(form){ 
-    senha = document.frmcad.senha.value
-	conf_senha = document.frmcad.conf_senha.value
- 
-	if (senha == conf_senha){
-		alert("SENHAS IGUAIS")
-	}else{
-		alert("SENHAS DIFERENTES")
-}
 
+function validaSenha (input){ 
+    if (input.value != document.getElementById('senha').value) {
+    input.setCustomValidity('Repita a senha corretamente');
+  } else {
+    input.setCustomValidity('');
+  }
+} 
 
 </script>
 
@@ -54,16 +52,20 @@ function validarSenha(form){
     <br>
     <br>
     <h1>Cadastro de Usuario </h1>
-</header>
-<body>
+
+	</header>
+
+ 
+<Body>
     <div class="container">
   <div class="jumbotron">
     <div class="row">
 	
+
+  
 	
 	
-	
-        <form name="frmcad" id="frmcad" action="CdUsuario.php" method="POST" "onSubmit=javascript: return validarSenha(form) (); " >
+        <form name="frmcad" id="frmcad" action="CdUsuario.php" method="POST" "onSubmit=javascript: return validaSenha(form) (); " >
             
             
 
@@ -71,18 +73,18 @@ function validarSenha(form){
 
             <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
             </div>
 			
 			<div class="form-group">
             <label for="login">Login</label>
-            <input type="text" class="form-control" id="login" placeholder="Login" required>
+            <input type="text" class="form-control" id="login" name="login" placeholder="Login" required>
             </div>
 			
 
             <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" id="senha" id="  placeholder="Senha" required>
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
             </div>
 
             <div class="form-group">
@@ -91,11 +93,10 @@ function validarSenha(form){
             </div>
             <div class="form-group">
               <label for="nivel">Selecione Nivel:</label>
-                <select class="form-control" id="nivel">
+                <select class="form-control" id="nivel" name="nivel">
                   <option>1</option>
                   <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                
                 </select>
             </div>
 
@@ -107,7 +108,7 @@ function validarSenha(form){
                 
                 </div>
                 </div>
-            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Cadastrar" onclick="validarSenha" />  
+            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Cadastrar" onclick="validaSenha()" />  
 			  <a href="index.html" class="btn btn-default">Cancelar</a>
 
         </form>
@@ -116,5 +117,5 @@ function validarSenha(form){
 </div>
      <script src="js/jquery.js"></script>
      <script src="js/bootstrap.min.js"></script>
-</body>
+</Body>
 </html>
