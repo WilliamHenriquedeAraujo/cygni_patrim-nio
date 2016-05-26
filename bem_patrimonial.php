@@ -1,63 +1,6 @@
-﻿
-<html>
-<?php
+﻿<html>
 
-	$numero_bem=$_POST["numero"];
-	$descricao=$_POST["descricao"];
-	$numero_nota=$_POST["nota_fiscal"];
-	$data_nota=$_POST["data_nota"];
-	$fornecedor=$_POST["fornecedor"];
-	$sala_localizacao=$_POST["localizacao_bem"];
-	$categoria=$_POST["categoria"];
-	$valor_bem=$_POST["valor"];
-	$sit=$_POST["situacao"];
-
-
-	//Pegando o que foi passado para a variável sit e transformando em apenas
-	//um carácter para escrever no banco de dados.
-	if($sit == "uso"){
-		$situacao = "U";
-	}
-	if($sit == "manutencao"){
-		$situacao = "M";
-	}
-	if($sit == "inutilizado"){
-		$situacao = "I";
-	}
-
-
-	/*
-	*	STRING DE CONEXÃO COM O BANCO DE DADOS E STATUS DA CONEXÃO
-	*	SE O IP DA MÁQUINA LINUX MUDAR É NECESSÁRIO MUDAR TAMBÉM A STRING DE CONEXÃO
-	*/	
-	$conexao=" host=localhost dbname=cygni port=5432 user=postgres password=root";
-	$status_conexao=pg_connect($conexao);
-
-	if(!$status_conexao){
-		echo "Erro na conexao com o banco de dados...";
-	}else{
-
-			$sql_insercao="INSERT INTO BemPatrimonial VALUES (".$numero_bem.", '".$descricao."', ".$numero_nota.", '".$data_nota."', '".$fornecedor."', ".$valor_bem.", '".$situacao."', ".$categoria.", ".$sala_localizacao." );";
-			pg_query($status_conexao, $sql_insercao);
-			echo "<strong>A gravacao dos dados foi realizada com sucesso!<strong><br>";
-	}
-
-	//echo "Dados:<br><br>
-
-	//Numero: ".$numero_bem."<br>
-	//Descricao: ".$descricao."<br>
-	//Numero da nota: ".$numero_nota."<br>
-	//Data da nota: ".$data_nota."<br>
-	//Fornecedor: ".$fornecedor."<br>
-	//Localizacao do bem: ".$sala_localizacao."<br>
-	//Categoria: ".$categoria."<br>
-	//Valor: ".$valor_bem."<br>
-	//Situacao: ".$situacao."<br>"
-?>
-
-<body>
-	
-	
+	<body>
 	
 	<!DOCTYPE html>
 <html lang="pt-br">
@@ -100,11 +43,87 @@
   </div>
  </div>
 </nav>
+
+<?php
+
+	
+	$descricao=$_POST["descricao"];
+	$numero_nota=$_POST["nota_fiscal"];
+	$data_nota=$_POST["data_nota"];
+	$fornecedor=$_POST["fornecedor"];
+	$sala_localizacao=$_POST["localizacao_bem"];
+	$categoria=$_POST["categoria"];
+	$valor_bem=$_POST["valor"];
+	$sit=$_POST["situacao"];
+
+
+	//Pegando o que foi passado para a variável sit e transformando em apenas
+	//um carácter para escrever no banco de dados.
+	if($sit == "uso"){
+		$situacao = "U";
+	}
+	if($sit == "manutencao"){
+		$situacao = "M";
+	}
+	if($sit == "inutilizado"){
+		$situacao = "I";
+	}
+
+
+	//Pegando o que contém na sala de localização do bem e passando para integer
+	if($sala_localizacao == "ADM"){
+		$id_localizacao = 1;
+	}
+	if($sala_localizacao == "FIN"){
+		$id_localizacao = 2;
+	}
+	if($sala_localizacao == "TI"){
+		$id_localizacao = 3;
+	}
+	if($sala_localizacao == "DIR"){
+		$id_localizacao = 4;
+	}
+
+    //Pegando o que contém na categoria e passando para integer 
+	if($categoria == "Moveis"){
+		$id_categoria = 1;
+	}
+	if($categoria == "Eletro Eletronicos"){
+		$id_categoria = 2;
+	}
+	if($categoria == "Materiais de escritorio"){
+		$id_categoria = 3;
+	}
+	if($categoria == "Carros automotores"){
+		$id_categoria = 4;
+	}
+	if($categoria == "Motos"){
+		$id_categoria = 5;
+	}
+
+	/*
+	*	STRING DE CONEXÃO COM O BANCO DE DADOS E STATUS DA CONEXÃO
+	*	SE O IP DA MÁQUINA LINUX MUDAR É NECESSÁRIO MUDAR TAMBÉM A STRING DE CONEXÃO
+	*/	
+	$conexao=" host=localhost dbname=cygni port=5432 user=postgres password=root";
+	$status_conexao=pg_connect($conexao);
+
+	if(!$status_conexao){
+		echo "Erro na conexao com o banco de dados...";
+	}else{
+
+			$sql_insercao="INSERT INTO BemPatrimonial (descricao, nrnotafiscal, dtnotafiscal, fornecedor, valor, situacao, codcat, numsala) VALUES ('".$descricao."', ".$numero_nota.", '".$data_nota."', '".$fornecedor."', ".$valor_bem.", '".$situacao."', ".$id_categoria.", ".$id_localizacao." );";
+			pg_query($status_conexao, $sql_insercao);
+			echo "<br><strong>A gravacao dos dados foi realizada com sucesso!<strong><br>";
+	}
+			pg_close($status_conexao);
+		
+?>
 </br>
-</br>
-<a href="index.html" class="btn btn-default">Voltar</a>
-
-</html> 
-
-
-
+        
+      <a href="index.html" class="btn btn-danger">Voltar</a>
+    
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
