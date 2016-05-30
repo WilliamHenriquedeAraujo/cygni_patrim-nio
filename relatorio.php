@@ -160,7 +160,7 @@
 					<td></td>
 					
                     <td class="actions">
-                        <a class="btn btn-success btn-xs" href="view.html">Gerar Relatório</a>
+                        <a class="btn btn-success btn-xs" href="relatorioPatrimonial.php">Gerar Relatório</a>
    
                     
 					</td>
