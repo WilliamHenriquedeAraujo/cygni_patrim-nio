@@ -4,24 +4,23 @@
 
 
 <?php
-         $strBd = "host=192.168.46.162 port=5432 dbname=cygni user=postgres password=root";
-		 $conexao = pg_connect($strBd);
+         $conexao = "host=localhost port=5432 dbname=cygni user=postgres password=root";
+		 $status_conexao = pg_connect($conexao);
 		 
-		if (!$conexao){
-			echo "Não foi possível estabelecer uma conexão com o Banco.";
+		if (!$status_conexao){
+			echo "Erro na conexao com o banco de dados...";
 		}else{
-			$sigla = $_POST ['sigla'];
-			$nome =  strip_tags($_POST ['nome']);
-			$responsavel =  strip_tags( $_POST ['responsavel']);
+			$sigla=$_POST["sigla"];
+			$nome=$_POST["nome"];
+			$responsavel=$_POST["responsavel"];
 			
-			$query = "INSERT INTO departamento VALUES ('$_POST[sigla]','$_POST[nome]','$_POST[responsavel]')";  
-			pg_query($query);
+			$sql = "INSERT INTO departamento VALUES ('".$sigla."', '".$nome."','".$responsavel."');";  
+			pg_query($status_conexao, $sql);
 			
-			echo "Departamento cadastrado com sucesso!!";
-			
+			echo "Cadastro realizado com sucesso!";
 		}
 		
-		pg_close($conexao);	
+		pg_close($status_conexao);	
 			
 			
 ?>
@@ -56,7 +55,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="index.php">Cygni Patrimônio</a>
+   <a class="navbar-brand" href="index.html">Cygni Patrimônio</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
@@ -73,7 +72,7 @@
 </nav>
 </br>
 </br>
-<a href="index.html" class="btn btn-default">Voltar</a>
+<a href="index.php" class="btn btn-default">Voltar</a>
 
 </html> 
 

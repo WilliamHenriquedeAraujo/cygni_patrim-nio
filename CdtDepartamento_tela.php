@@ -15,7 +15,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="index.php">Cygin Patrimônio</a>
+   <a class="navbar-brand" href="index.html">Cygin Patrimônio</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
@@ -44,10 +44,10 @@
     <div class="container">
   <div class="jumbotron">
     <div class="row">
-        <form name="frm" id="frm" action="CdtDepartamento.php" method="POST" onsubmit="  ">
+        <form name="frm" id="frm" action="CdtDepartamento.php" method="POST">
             
             <br>   Sigla do Departamento <input type="text" name="sigla" value="" required= "y" size="1" maxlength="13" /> <br>
-            <br>   Nome do Departamento <input type="text" name="Nome" value="" size= "30"  required= "y" size="30" maxlength="20"/><br>
+            <br>   Nome do Departamento <input type="text" name="nome" value="" size= "30"  required= "y" size="30" maxlength="20"/><br>
             <br> Responsavel do Departamento <input type="text" name="responsavel" value="" size= "30" required= "y" size="30" maxlength="13"/> <br>
             <hr />
                 <div id="actions" class="row">
@@ -56,7 +56,7 @@
                 
              </div>
              </div>
-            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Inserir" />  <a href="index.html" class="btn btn-default">Cancelar</a>
+            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Inserir" />  <a href="index.php" class="btn btn-default">Cancelar</a>
 
         </form>
     </div>
