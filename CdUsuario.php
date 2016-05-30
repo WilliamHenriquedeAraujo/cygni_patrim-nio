@@ -18,11 +18,11 @@
 
 
 <?php
-$login=$_POST['login'];
-$nome=$_POST['nome'];
-$senha=$_POST['senha'];
-$nivel=$_POST['nivel'];
-$conexao=" host=127.0.0.1 dbname=cygni port=5432 user=postgres password=123456";
+$login=$_POST["login"];
+$nome=$_POST["nome"];
+$senha=$_POST["senha"];
+$nivel=$_POST["nivel"];
+$conexao=" host=localhost dbname=cygni port=5432 user=postgres password=root";
 $status_conexao=pg_connect($conexao);
 if(!$status_conexao){
 	
@@ -68,7 +68,7 @@ else{
     <li><a href="index.php">Início</a></li>
 	<li><a href="relatorio.php">Emitir Relatórios</a></li>
      <li><a href="CdUsuario_tela.php">Cadastrar usuário</a></li>
-	 <a href="#" class="btn btn-info btn-lg">
+	 <a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
  
@@ -81,7 +81,7 @@ else{
 </body>
 </br>
 
-<a href="index.html" class="btn btn-default">Voltar</a>
+<a href="index.php" class="btn btn-default">Voltar</a>
 
 </html> 
 

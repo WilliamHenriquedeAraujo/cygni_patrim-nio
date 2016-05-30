@@ -100,8 +100,8 @@ function validaSenha (input){
                 <label for="conf_senha">Selecione um Nível</label>
               <select class="form-control" id="nivel" name="nivel">
                   <option> escolha </option>
-                  <option  value="1">Gerente</option>
-                  <option  value="2"> Funcionário</option>
+                  <option  value="g">Gerente</option>
+                  <option  value="f"> Funcionário</option>
                 
                 </select>
             </div>
