@@ -31,13 +31,13 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="index.html">Cygni Patrimônio</a>
+   <a class="navbar-brand" href="index.php">Cygni Patrimônio</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
-    <li><a href="index.html">Início</a></li>
-	<li><a href="relatorio.html">Emitir Relatórios</a></li>
-     <li><a href="CdUsuario.html">Cadastrar usuário</a></li>
+    <li><a href="index.php">Início</a></li>
+	<li><a href="relatorio.php">Emitir Relatórios</a></li>
+     <li><a href="CdUsuario_tela.php">Cadastrar usuário</a></li>
 	 <a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
@@ -61,7 +61,7 @@
 
  	
 	$numsala=$_POST["sala_do_bem"];
-	$conexao=" host=192.168.46.162 dbname=cygni port=5432 user=postgres password=root";
+	$conexao=" host=127.0.0.1 dbname=cygni port=5432 user=postgres password=root";
 	$status_conexao=pg_connect($conexao);
 
 

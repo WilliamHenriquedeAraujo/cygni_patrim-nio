@@ -3,7 +3,7 @@
 <html>
 
 <?php
-         $strBd = "host=192.168.46.162 port=5432 dbname=cygni user=postgres password=root";
+         $strBd = "host=127.0.0.1 port=5432 dbname=cygni user=postgres password=root";
 		 $conexao = pg_connect($strBd);
 		 
 		if (!$conexao){
@@ -58,13 +58,13 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="index.html">Cygni Patrimônio</a>
+   <a class="navbar-brand" href="index.php">Cygni Patrimônio</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
-    <li><a href="index.html">Início</a></li>
-	<li><a href="relatorio.html">Emitir Relatórios</a></li>
-     <li><a href="CdUsuario.html">Cadastrar usuário</a></li>
+    <li><a href="index.php">Início</a></li>
+	<li><a href="relatorio.php">Emitir Relatórios</a></li>
+     <li><a href="CdUsuario_tela.php">Cadastrar usuário</a></li>
 	 <a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
@@ -75,7 +75,7 @@
 </nav>
 </br>
 </br>
-<a href="index.html" class="btn btn-default">Voltar</a>
+<a href="index.php" class="btn btn-default">Voltar</a>
 
 </html> 
 

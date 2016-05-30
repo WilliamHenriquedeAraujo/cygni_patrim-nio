@@ -28,7 +28,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="index.html">Cygni Patrimônio</a>
+   <a class="navbar-brand" href="index.php">Cygni Patrimônio</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
@@ -105,7 +105,7 @@
 	*	STRING DE CONEXÃO COM O BANCO DE DADOS E STATUS DA CONEXÃO
 	*	SE O IP DA MÁQUINA LINUX MUDAR É NECESSÁRIO MUDAR TAMBÉM A STRING DE CONEXÃO
 	*/	
-	$conexao=" host=192.168.46.162 dbname=cygni port=5432 user=postgres password=root";
+	$conexao=" host=127.0.0.1 dbname=cygni port=5432 user=postgres password=root";
 	$status_conexao=pg_connect($conexao);
 
 	if(!$status_conexao){

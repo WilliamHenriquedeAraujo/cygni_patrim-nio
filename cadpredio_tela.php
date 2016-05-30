@@ -14,7 +14,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="index.html">Cygni Patrimônio</a>
+   <a class="navbar-brand" href="index.php">Cygni Patrimônio</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
@@ -57,7 +57,7 @@
                 
              </div>
              </div>
-            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Inserir" />  <a href="index.html" class="btn btn-default">Cancelar</a>
+            <br><input type="submit" name="inserir" id="btninserir"  class="btn btn-primary" value="Inserir" />  <a href="index.php" class="btn btn-default">Cancelar</a>
 
         </form>
     </div>

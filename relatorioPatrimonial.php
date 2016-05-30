@@ -26,12 +26,12 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
    </button>
-   <a class="navbar-brand" href="index.html">Cygni Patrimônio</a>
+   <a class="navbar-brand" href="index.php">Cygni Patrimônio</a>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
-    <li><a href="index.html">Início</a></li>
-	<li><a href="bem_patrimonial.html">Cadastrar usuário</a></li>
+    <li><a href="index.php''">Início</a></li>
+	<li><a href="bem_patrimonial.php">Cadastrar usuário</a></li>
 	 <a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
