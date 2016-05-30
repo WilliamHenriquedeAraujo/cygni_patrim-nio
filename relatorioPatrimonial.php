@@ -30,7 +30,7 @@
   </div>
   <div id="navbar" class="navbar-collapse collapse">
    <ul class="nav navbar-nav navbar-right">
-    <li><a href="index.php">Início</a></li>
+    <li><a href="index.php''">Início</a></li>
 	<li><a href="bem_patrimonial.php">Cadastrar usuário</a></li>
 	 <a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
@@ -54,7 +54,7 @@
 
 		
 		<?php
- 			$strBd = "host=localhost port=5432 dbname=cygni user=postgres password=root";
+ 			$strBd = "host=192.168.46.162 port=5432 dbname=cygni user=postgres password=root";
 			 $conexao = pg_connect($strBd);
 			if (!$conexao){
 				echo "Não foi possível estabelecer uma conexão com o Banco.";
@@ -62,7 +62,7 @@
 				
 				echo "<table class=table table-responsive>";
 				echo "<tr><th>Numero do Bem</th><th>Descricao</th><th>Nº da Nota</th><th>Data da Nota</th><th>Fornecedor</th><th>Valor</th><th>Situacao</th><th>Cod.Cadastro</th><th>Sala</th></tr>";
-				$result = pg_query ($conexao , "select * from bempatrimonial whare situacao='U' ");
+				$result = pg_query ($conexao , "select * from bempatrimonial where situacao='U' ");
 				while ($row=pg_fetch_row($result)) {
 				  echo "<tr>";
 				  echo "<td>".$row[0]."</td>";
