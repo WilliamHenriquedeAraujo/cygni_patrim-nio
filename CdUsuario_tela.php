@@ -44,7 +44,7 @@ function validaSenha (input){
    <ul class="nav navbar-nav navbar-right">
    <li><a href="index.html">Início</a></li>
 	<li><a href="relatorio.html">Emitir Relatórios</a></li>
-	<a href="#" class="btn btn-info btn-lg">
+	<a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
  

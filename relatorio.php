@@ -41,7 +41,7 @@
    <ul class="nav navbar-nav navbar-right">
     <li><a href="index.php">Início</a></li>
     <li><a href="CdUsuario_tela.php">Cadastrar usuário</a></li>
-	<a href="#" class="btn btn-info btn-lg">
+	<a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
     

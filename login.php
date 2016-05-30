@@ -4,7 +4,7 @@
 	$senha=$_POST["password"];
 
 
-	$conexao=" host=10.0.0.117 dbname=cygni port=5432 user=postgres password=root";
+	$conexao=" host=192.168.46.162 dbname=cygni port=5432 user=postgres password=root";
 	$status_conexao=pg_connect($conexao);
 
 

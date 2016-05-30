@@ -32,7 +32,7 @@
    <ul class="nav navbar-nav navbar-right">
     <li><a href="index.html">Início</a></li>
 	<li><a href="bem_patrimonial.html">Cadastrar usuário</a></li>
-	 <a href="#" class="btn btn-info btn-lg">
+	 <a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
  
@@ -54,7 +54,7 @@
 
 		
 		<?php
- 			$strBd = "host=10.0.0.117 port=5432 dbname=cygni user=postgres password=root";
+ 			$strBd = "host=192.168.46.162 port=5432 dbname=cygni user=postgres password=root";
 			 $conexao = pg_connect($strBd);
 			if (!$conexao){
 				echo "Não foi possível estabelecer uma conexão com o Banco.";

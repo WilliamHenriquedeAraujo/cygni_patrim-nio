@@ -34,7 +34,7 @@
     <li><a href="index.php">Início</a></li>
 	<li><a href="relatorio.php">Emitir Relatórios</a></li>
     <li><a href="CdUsuario_tela.php">Cadastrar usuário</a></li>
-	<a href="#" class="btn btn-info btn-lg">
+	<a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
    </ul>
@@ -101,7 +101,7 @@
   
 
   
-  $conexao=" host=10.0.0.117 dbname=cygni port=5432 user=postgres password=root";
+  $conexao=" host=192.168.46.162 dbname=cygni port=5432 user=postgres password=root";
   $status_conexao=pg_connect($conexao);
 
   if(!$status_conexao){
@@ -129,7 +129,7 @@
  <!-- CÓDIGO EM PHP PARA BUSCAR AS CATEGORIAS CONTIDAS NO BANCO DE DADOS -->   
 <?php
   
-  $conexao=" host=10.0.0.117 dbname=cygni port=5432 user=postgres password=root";
+  $conexao=" host=192.168.46.162 dbname=cygni port=5432 user=postgres password=root";
   $status_conexao=pg_connect($conexao);
 
   if(!$status_conexao){

@@ -1,5 +1,10 @@
 <html>
 <header>
+    <?php 
+
+  session_start();
+    echo "<h3><strong> Ol&aacute; ".$_SESSION['nivel_usuario']." ".$_SESSION['nome_usuario'].", o que deseja fazer ?</h3></strong><br>";
+    ?>   
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,23 +27,21 @@
  
     <li><a href="relatorio.php">Emitir Relatórios</a></li>
     <li><a href="CdUsuario_tela.php">Cadastrar usuário</a></li>
-	<a href="#" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-log-out"></span> Log out
-        </a>
-  </div>
- </div>
-</nav>
+	<a href="logout.php" class="btn btn-info btn-lg">
+  <span class="glyphicon glyphicon-log-out"></span> Log out
+          </a>
+        </div>
+        </div>
+        </nav>
+
+
 
 <div id="main" class="container-fluid">
     <br>
     <br>
     <h1>Home </h1>
 
-    <?php 
-
-  session_start();
-    echo "<h3><strong> Ol&aacute; ".$_SESSION['nivel_usuario']." ".$_SESSION['nome_usuario'].", o que deseja fazer ?</h3></strong><br>";
-    ?>    
+   
 </header>
 <body>
     <div class="container">

@@ -38,7 +38,7 @@
     <li><a href="index.html">Início</a></li>
 	<li><a href="relatorio.html">Emitir Relatórios</a></li>
      <li><a href="CdUsuario.html">Cadastrar usuário</a></li>
-	 <a href="#" class="btn btn-info btn-lg">
+	 <a href="logout.php" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
  
@@ -61,7 +61,7 @@
 
  	
 	$numsala=$_POST["sala_do_bem"];
-	$conexao=" host=10.0.0.117 dbname=cygni port=5432 user=postgres password=root";
+	$conexao=" host=192.168.46.162 dbname=cygni port=5432 user=postgres password=root";
 	$status_conexao=pg_connect($conexao);
 
 
