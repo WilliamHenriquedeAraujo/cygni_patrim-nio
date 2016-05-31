@@ -76,7 +76,7 @@
 	if(!$status_conexao){
 		echo "Erro na conexao com o banco de dados...";
 	}else{
-			$sql="select numero_bem, descricao, nrnotafiscal, dtnotafiscal, fornecedor, valor, situacao, codcat, numsala from bempatrimonial b, sala s where b.numsala = s.numero_sala and numero_sala = ".$numsala." order by numero_bem;";
+			$sql="select numero_bem, descricao, nrnotafiscal, dtnotafiscal, fornecedor, valor, situacao, codcat, numsala from bempatrimonial b, sala s where b.numsala = s._sala and numsala = ".$numsala." order by numero_bem;";
 			pg_query($status_conexao, $sql);
 			$resultado_consulta = pg_query($status_conexao, $sql);
 			$qtd_linhas = pg_num_rows($resultado_consulta);
