@@ -2,8 +2,11 @@
 
 
 	<body>
-	
-	
+	<?php 
+
+  session_start();
+    echo "<h3><strong> Ol&aacute; ".$_SESSION['nivel_usuario']." ".$_SESSION['nome_usuario'].", o que deseja fazer ?</h3></strong><br>";
+    ?>   
 	
 	<!DOCTYPE html>
 <html lang="pt-br">
@@ -61,7 +64,7 @@
 
  	
 	$numsala=$_POST["sala_do_bem"];
-	$conexao=" host=127.0.0.1 dbname=cygni port=5432 user=postgres password=root";
+	$conexao=" host=localhost dbname=cygni port=5432 user=postgres password=root";
 	$status_conexao=pg_connect($conexao);
 
 
