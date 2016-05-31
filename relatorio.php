@@ -106,7 +106,7 @@
 					
 					
                     <td class="actions">
-                        <a class="btn btn-success btn-xs" href="relatorio_sala.html">Gerar Relatório</a>
+                        <a class="btn btn-success btn-xs" href="relatorio_sala_correcao.php">Gerar Relatório</a>
    
                     
 					</td>
