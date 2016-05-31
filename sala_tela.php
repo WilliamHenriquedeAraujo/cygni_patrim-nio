@@ -65,7 +65,35 @@
  
  <div class="form-group col-md-4">
    <label for="_sala">Sala</label>
-   <input type="number" class="form-control" id="_sala" name="_sala" required>
+   
+   <select name="localizacao_sala" class="form-control" id="campo1">
+      <option>Selecione</option>
+
+<!-- CÓDIGO EM PHP PARA BUSCAR AS CATEGORIAS CONTIDAS NO BANCO DE DADOS -->
+<?php
+  
+
+  
+  $conexao=" host=127.0.0.1 dbname=cygni port=5432 user=postgres password=root";
+  $status_conexao=pg_connect($conexao);
+
+  if(!$status_conexao){
+    echo "Erro na conexao com o banco de dados...";
+  }else{
+    $sql_sigla_sala="SELECT _sala FROM sala;";
+    $resultado=pg_query($status_conexao, $sql_sigla_sala);
+    $qtd_linhas=pg_num_rows($resultado);
+
+      for($i=0; $i < $qtd_linhas; $i++){
+          $num_sala=pg_fetch_row($resultado);
+          echo "<option>".$num_sala[0]."</option>";
+          
+      }
+  }
+?>
+<!--VOLTANDO PARA A CODIFICAÇÃO HTML -->
+</select><br>  
+ </div>
  </div>
  
  <div class="form-group col-md-4">
@@ -81,7 +109,35 @@
  
  <div class="form-group col-md-4">
    <label for="codPredio">Código do Prédio</label>
-   <input type="number" class="form-control" id="codPredio"required>
+  
+      <select name="localizacao_predio" class="form-control" id="campo4">
+      <option>Selecione</option>
+
+<!-- CÓDIGO EM PHP PARA BUSCAR AS CATEGORIAS CONTIDAS NO BANCO DE DADOS -->
+<?php
+  
+
+  
+  $conexao=" host=127.0.0.1 dbname=cygni port=5432 user=postgres password=root";
+  $status_conexao=pg_connect($conexao);
+
+  if(!$status_conexao){
+    echo "Erro na conexao com o banco de dados...";
+  }else{
+    $sql_sigla_sala="SELECT codpredio FROM sala;";
+    $resultado=pg_query($status_conexao, $sql_sigla_sala);
+    $qtd_linhas=pg_num_rows($resultado);
+
+      for($i=0; $i < $qtd_linhas; $i++){
+          $cod_predio=pg_fetch_row($resultado);
+          echo "<option>".$cod_predio[0]."</option>";
+          
+      }
+  }
+?>
+<!--VOLTANDO PARA A CODIFICAÇÃO HTML -->
+</select><br>  
+ </div>
  </div>
 </div>
  
