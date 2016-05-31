@@ -50,7 +50,7 @@
  </br>
   		</br>
   		</br>
-		<h1>Relatório Salas</h1>
+		<h1>Relatório Predios</h1>
 		</br>
 
 		
